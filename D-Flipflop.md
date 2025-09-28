@@ -3,13 +3,14 @@
 **Code**
 
 ```
-module Code(d,clk,q);
-input d;
-input clk;
-output reg q;
+module Code(
+input d,
+input clk,
+output reg q,q_bar);
 always @(posedge clk)
 begin 
 q<=d;
+q_bar=~d;
 end
 endmodule
 ```
@@ -19,8 +20,8 @@ endmodule
 ```
 module Testbench();
     reg clk,d;
-    wire q;
-    Code uut(d,clk,q);
+    wire q,q_bar;
+    Code uut(d,clk,q,q_bar);
     initial
     begin
     clk=0;
@@ -36,7 +37,6 @@ module Testbench();
     d <= 1;
     #100; $finish;
     end
-
 endmodule
 ```
 ![Schematic](./images/dT.png)
