@@ -1,4 +1,4 @@
-![Schematic](./images/dsche.png)
+![Schematic](./images/ddsche.png)
 
 **Code**
 
@@ -39,4 +39,4 @@ module Testbench();
     end
 endmodule
 ```
-![Schematic](./images/dT.png)
+![Schematic](./images/dTT.png)
