@@ -56,6 +56,7 @@ module Testbench();
     rst_n <= 1; s <= 1; r <= 0;
     #100;
     rst_n <= 1; s <= 1; r <= 1;
+    #100; $finish;
     end
 endmodule
 ```
